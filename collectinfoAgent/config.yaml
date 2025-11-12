@@ -1,0 +1,36 @@
+# 数据源配置（巨潮资讯网：全市场定期报告）
+sources:
+  - name: "Cninfo_定期报告"
+    type: "cninfo"
+    enabled: true
+    periods: ["semiannual"]
+    page_size: 50
+    max_pages: 120
+    max_total: 6000
+    se_date: "2025-01-01~2025-12-31"
+    title_keywords: ["2025","报告","季度报告","半年度报告","年度报告"]
+
+# 规则与阈值
+rules:
+  notify_on:
+    - condition: "new_entry"         # 新进
+    - condition: "increase"          # 增持
+    - condition: "decrease"          # 减持
+    - condition: "exit"              # 退出
+  thresholds:
+    # 如需以市值判断需结合价格数据，这里暂不启用门槛
+    # min_market_value: 100000000
+    # min_change_ratio: 0.01
+
+# 调度
+schedule:
+  enabled: false
+  interval_minutes: 60
+
+# 存储
+storage:
+  sqlite_path: "data/holdings.db"
+
+# 推送
+push:
+  email_enabled: false
