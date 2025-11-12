@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+lxml
+pdfplumber
+PyPDF2
+python-dotenv
+schedule
+pydantic
+pyyaml
