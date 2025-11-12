@@ -1,0 +1,18 @@
+# 总控智能体依赖包
+tkinter  # Python标准库，通常已包含
+sqlite3  # Python标准库，通常已包含
+
+# 其他智能体的依赖（确保所有智能体都能正常工作）
+requests
+beautifulsoup4
+lxml
+pdfplumber
+PyPDF2
+python-dotenv
+schedule
+pydantic
+pyyaml
+
+# 可选：如果需要更高级的GUI功能
+# pillow  # 图像处理
+# matplotlib  # 图表绘制
